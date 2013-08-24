@@ -120,6 +120,8 @@ bool WebSocket::doHandshake() {
             
             counter = 0; // Start saving new header string
         }
+		if (counter>=60)
+			counter--;
     }
 
     // Assert that we have all headers that are needed. If so, go ahead and
